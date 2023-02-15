@@ -9,6 +9,7 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./company-detail.component.scss']
 })
 export class CompanyDetailComponent implements OnInit {
+  loading: boolean = false;
   company!: ICompany;
   id!: number;
 
@@ -16,7 +17,11 @@ export class CompanyDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.loading = true;
     this.id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
-    this.companyService.getCompanyByID(this.id).subscribe(item => this.company = item);
+    this.companyService.getCompanyByID(this.id).subscribe(item => {
+      this.company = item;
+      this.loading = false;
+    });
   }
 }

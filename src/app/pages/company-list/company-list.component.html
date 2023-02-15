@@ -1,4 +1,6 @@
-<div class="company-list">
+<app-loader *ngIf="loading"></app-loader>
+
+<div class="company-list" *ngIf="!loading">
   <aside class="company-list__instruments">
     <app-company-sort [companyList]="filteredList"></app-company-sort>
     <app-company-filter [companyList]="filteredList" (filters)="setFilters($event)"></app-company-filter>

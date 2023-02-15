@@ -1,4 +1,6 @@
-<div class="companyDetail">
+<app-loader *ngIf="loading"></app-loader>
+
+<div class="companyDetail" *ngIf="!loading">
   <div class="companyDetail__wrapper">
     <div class="companyDetail__container-1">
       <img class="companyDetail__logo" src="{{company.logo}}" alt="">

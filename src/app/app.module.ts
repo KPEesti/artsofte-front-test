@@ -12,6 +12,7 @@ import { CompanySortComponent } from './components/company-sort/company-sort.com
 import { CompanyFilterComponent } from './components/company-filter/company-filter.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { LayoutComponentComponent } from './components/layout-component/layout-component.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LayoutComponentComponent } from './components/layout-component/layout-c
     CompanyItemComponent,
     CompanySortComponent,
     CompanyFilterComponent,
-    LayoutComponentComponent
+    LayoutComponentComponent,
+    LoaderComponent
   ],
     imports: [
         BrowserModule,

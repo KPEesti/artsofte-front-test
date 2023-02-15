@@ -12,6 +12,7 @@ import {FormGroup} from "@angular/forms";
   styleUrls: ['./company-list.component.scss']
 })
 export class CompanyListComponent implements OnInit {
+  loading: boolean = false;
   companyList: ICompany[] = [];
   filteredList: ICompany[] = [];
 
@@ -23,10 +24,12 @@ export class CompanyListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.loading = true;
     this.companiesService.getCompanies().subscribe(list => {
       this.companyList = list;
       this.filteredList = list;
       this.filterService.setFiltersOptions(list);
+      this.loading = false;
     });
   }
 }
