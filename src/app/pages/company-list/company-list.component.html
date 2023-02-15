@@ -1,0 +1,10 @@
+<div class="company-list">
+  <aside class="company-list__instruments">
+    <app-company-sort [companyList]="filteredList"></app-company-sort>
+    <app-company-filter [companyList]="filteredList" (filters)="setFilters($event)"></app-company-filter>
+  </aside>
+  <div class="company-list__container">
+    <div *ngIf="filteredList.length === 0"><h2>К сожалению таких компаний не найдено</h2></div>
+    <app-company-item *ngFor="let company of filteredList" [company]="company"></app-company-item>
+  </div>
+</div>

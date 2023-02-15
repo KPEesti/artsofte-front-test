@@ -1,0 +1,46 @@
+.company {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 20px;
+
+  background-color: #f3f3f3;
+
+  cursor: pointer;
+
+  transition: ease-in-out 0.2s;
+
+  &:hover {
+    box-shadow: #a2a2a2 2px 3px 5px 1px;
+  }
+
+  &__logo {
+    max-width: 270px;
+    margin-right: 40px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 25px;
+  }
+
+  &__subInfo {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5e5e5e;
+    margin-right: 10px;
+    margin-bottom: 5px;
+
+    span {
+      font-weight: 400;
+      color: #121212;
+    }
+  }
+}

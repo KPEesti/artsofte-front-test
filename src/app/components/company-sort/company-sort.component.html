@@ -1,0 +1,15 @@
+<div>
+  <h3>Sorting</h3>
+
+  <div class="sort">
+    <select #type class="sort__options" (change)="changeOption(type.value)">
+      <option value="business_name">Company Name</option>
+      <option value="industry">Industry</option>
+      <option value="type">Company Type</option>
+    </select>
+    <button class="sort__dir" (click)="changeSortDir(sortService.sortDir * -1)">
+      <img *ngIf="sortService.sortDir === 1" src="./assets/sort-asc.svg" alt="">
+      <img *ngIf="sortService.sortDir === -1" src="./assets/sort-desc.svg" alt="">
+    </button>
+  </div>
+</div>

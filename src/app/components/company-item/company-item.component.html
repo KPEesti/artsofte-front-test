@@ -1,0 +1,10 @@
+<div class="company" [routerLink]="['/detail', company.id]">
+  <div>
+    <img class="company__logo" [src]="company.logo" alt="">
+  </div>
+  <div class="company__info">
+    <p class="company__title">{{company.suffix}} "{{company.business_name}}"</p>
+    <p class="company__subInfo"><span>Industry: </span>{{company.industry}}</p>
+    <p class="company__subInfo"><span>Type: </span>{{company.type}}</p>
+  </div>
+</div>

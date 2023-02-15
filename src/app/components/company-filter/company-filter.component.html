@@ -1,0 +1,21 @@
+<div class="filter">
+  <h3>Filter</h3>
+  <form
+    class="filter__form"
+    [formGroup]="filterForm"
+    (change)="setFilters()"
+  >
+    <input class="filter__input" type="text" formControlName="name" placeholder="Search by Company Name...">
+
+    <select class="filter__input" formControlName="type">
+      <option value="" selected>Any type</option>
+      <option *ngFor="let type of this.filterService.types" [value]="type">{{type}}</option>
+    </select>
+
+    <select class="filter__input" formControlName="industry">
+      <option value="" selected>Any industry</option>
+      <option *ngFor="let industry of this.filterService.industries" [value]="industry">{{industry}}</option>
+    </select>
+
+  </form>
+</div>

@@ -1,0 +1,24 @@
+<div class="companyDetail">
+  <div class="companyDetail__wrapper">
+    <div class="companyDetail__container-1">
+      <img class="companyDetail__logo" src="{{company.logo}}" alt="">
+    </div>
+    <div class="companyDetail__container-2">
+      <div>
+        <h1 class="companyDetail__title">{{company.suffix}} "{{company.business_name}}" </h1>
+        <p class="companyDetail__tagline">{{company.catch_phrase | uppercase }}</p>
+        <p class="companyDetail__industry"><span>Industry:</span> {{company.industry}}</p>
+      </div>
+      <div>
+        <div class="companyDetail__contacts">
+          <img src="./assets/phone.svg" alt="">
+          <span>{{company.phone_number}}</span>
+        </div>
+        <div class="companyDetail__contacts">
+          <img src="./assets/location.svg" alt="">
+          <span>{{company.full_address}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

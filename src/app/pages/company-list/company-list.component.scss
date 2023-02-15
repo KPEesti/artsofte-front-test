@@ -1,0 +1,20 @@
+.company-list {
+  display: grid;
+  grid-template-columns: 250px 850px;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 20px;
+
+  &__instruments {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 850px;
+  }
+}
